@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Booklist App</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <header class="header">
+                <h3 id="main-heading">Booklist</h3>
+        </header>
+        <section id="main-section">
+            <div class="message">
+                <!-- <div class="prompt" id="prompt-success"><h3>Book added Successfully</h3></div> -->
+                <!-- <div class="prompt" id="prompt-danger"><h3>Error adding book</h3></div> -->
+            </div>
+            <section class="book-details" id="book-name">
+                <h1 class="book-heading">
+                    Name
+                </h1>
+                <textarea name="book-name" class="book-txtarea" cols="" rows="" id='name'></textarea>
+            </section>
+            <section class="book-details" id="book-name">
+                <h1 class="book-heading">
+                    Author
+                </h1>
+                <textarea name="book-author" class="book-txtarea" cols="" rows="" id='author'></textarea>
+            </section>
+            <section class="book-details" id="book-name">
+                <h1 class="book-heading">
+                    ISBN
+                </h1>
+                <textarea name="book-ISBN" class="book-txtarea" cols="" rows="" id = 'ISBN'></textarea>
+            </section>
+            <button class="submit-btn">Submit</button>
+            <section class="display-card">
+            </section>
+        </section>
+        <footer class="footer">
+                Thanks for visiting
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

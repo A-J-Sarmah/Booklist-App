@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    min-height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-rows: 7.5% auto 7.5%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "c c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+@media (max-height:1185px) {
+    .container{
+        grid-template-rows: 5% auto 5%;
+    }
+}
+
+.header{
+    grid-area: h;
+    background-color: #505059;
+    color: #FFF;
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-section{
+    grid-area: c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.message{
+    align-self: stretch;
+    margin-bottom: 2rem;
+}
+
+.prompt{
+    text-align: center;
+    color: #FFF;
+    font-family: 'Roboto';
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+} 
+
+#prompt-success{
+    background-color: #4BB543;
+}
+
+#prompt-danger{
+    background-color: #d11a2a;
+}
+
+.book-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+@media (max-width:850px) {
+    .book-details{
+        width: 50%;
+    }
+}
+
+.book-heading{
+    margin-bottom: 1em;
+    font-family: 'Roboto';
+}
+
+.book-txtarea{
+    resize: none;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.submit-btn{
+    background-color: #505059;
+    padding: 0.5em;
+    color: #ffffff;
+    border-radius: 10%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.display-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    margin-top: 3em;
+    align-self: stretch;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-bottom: 1px solid #505059;
+}
+
+.card-details{
+    margin-bottom: 1em;
+}
+
+.del-btn{
+    background: #d11a2a;
+    color: #FFF;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.footer{
+    grid-area: f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #505059;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
